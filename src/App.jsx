@@ -9,7 +9,7 @@ function App() {
 
   return (
     <div className="App bg-[#ADF5FF] h-screen">
-      <NavPersonalizado tipoOscuro={true}/>
+      <NavPersonalizado tipoOscuro={false} className="z-50" />
       <HomeSectionContent></HomeSectionContent>
     </div>
     

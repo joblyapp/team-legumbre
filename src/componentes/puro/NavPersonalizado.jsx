@@ -16,7 +16,7 @@ export default function NavPersonalizado(props = { tipoOscuro: false }) {
   }, [])
   
   return (
-    <header className="fixed w-full flex flex-row  font-jost text-[24px] justify-between px-[5%] pt-2 lg:text-[17px] xl:text-[22px]  desk:text-[24px] ">
+    <header className="fixed w-full flex flex-row  font-jost text-[24px] justify-between px-[5%] pt-2 lg:text-[17px] xl:text-[22px]  desk:text-[24px] z-50">
       <img
         className="lg:h-[85px] xl:h-[105px] desk:h-full"
         src={`/imagenes/logo-nav-${tipoOscuro ? "negro" : "blanco"}.png`}
