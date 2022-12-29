@@ -9,6 +9,9 @@ module.exports = {
       fontFamily: {
         jost: ["Jost"],
       },
+      screens: {
+        'desk': '1440px',
+      },
     },
   },
   plugins: [],
