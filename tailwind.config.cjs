@@ -8,6 +8,9 @@ module.exports = {
     extend: {
       fontFamily: {
         jost: ["Jost"],
+        lusitana: ["Lusitana"],
+        mplus2: ["M+PLUS+2"],
+        roboto: ["Roboto+Condensed"],
       },
       screens: {
         'desk': '1440px',
