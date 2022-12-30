@@ -11,12 +11,17 @@
 .section-gallery {
     background-color: var(--principal);
     width: 154vh;
-    height: 650px;
+    height: 750px;
     display: flex;
+    background-image: url(../public/imagenes/forma.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    overflow: hidden;
+    background-position-y: -203px;
 }
 
+
 .conteiner-gallery {
-    margin: 15px 10px 20px;
     padding: 30px;
     width: 80%;
     height: auto;
@@ -24,6 +29,7 @@
     grid-template-columns: auto auto auto;
     margin: auto;
     row-gap: 2rem;
+    margin-top: 100px;
 }
 
 .items-1 {
@@ -32,6 +38,7 @@
     height: 10rem;
     background-repeat: no-repeat;
     background-size: 100% 10rem;
+    object-fit: cover;
     margin: auto;
 }
 
