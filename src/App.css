@@ -4,28 +4,32 @@
 
 /* section gallery/seguros */
 
+:root {
+    --principal: #adf5ff;
+}
+
 .section-gallery {
     background-color: var(--principal);
-    width: 155vh;
+    width: 154vh;
     height: 650px;
     display: flex;
 }
 
 .conteiner-gallery {
     margin: 15px 10px 20px;
-    padding: 25px;
-    width: 75%;
+    padding: 30px;
+    width: 80%;
     height: auto;
     display: grid;
     grid-template-columns: auto auto auto;
     margin: auto;
-    column-gap: 0;
     row-gap: 2rem;
 }
 
 .items-1 {
     border-radius: 5%;
     width: 15rem;
+    height: 10rem;
     background-repeat: no-repeat;
     background-size: 100% 10rem;
     margin: auto;

@@ -9,7 +9,7 @@ export default function GalleryItems (props={title, icon,bgImg}) {
                 backgroundImage: `url(${bgImg})`
               }} className="items-1">
                 <div className="icon-seguro">
-                    <img src={icon} alt="hogar"/>
+                    <img src={icon}/>
                     <span className="lusitana">{title}</span>
                 </div>
             </div>
