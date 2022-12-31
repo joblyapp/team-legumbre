@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Lusitana&display=swap');
+
+
 .bg-home {
     background-image: url('/src/assets/img/bg-image-home.jpg');
 }
@@ -11,12 +14,11 @@
 .section-gallery {
     background-color: var(--principal);
     width: 154vh;
-    height: 750px;
+    height: 690px;
     display: flex;
     background-image: url(../public/imagenes/forma.png);
     background-repeat: no-repeat;
     background-size: 100%;
-    overflow: hidden;
     background-position-y: -203px;
 }
 
@@ -31,6 +33,7 @@
     row-gap: 2rem;
     margin-top: 100px;
 }
+
 
 .items-1 {
     border-radius: 5%;
@@ -51,15 +54,77 @@
 }
 
 .icon-seguro img:nth-child(1) {
+    position: relative;
     width: 100px;
     margin-bottom: 10px;
 }
 
 .icon-seguro span {
-    font-family: 'lusitana';
-    font-weight: 60px;
+    font-family: 'Lusitana', serif;
+    font-weight: bold;
     font-size: medium;
     color: white;
     position: relative;
     bottom: 10px;
+}
+
+/* Section Banner */
+
+.section-banner {
+    width: 100%;
+    height: 800px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--principal);
+    overflow:visible;
+    background-image: url(../public/imagenes/forma.png) ;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position-y: 0px;
+}
+
+.banner {
+    background-image: url(../public/imagenes/banner.jpeg);
+    background-repeat: no-repeat;
+    background-size: 55rem;
+    border-radius: 10px;
+    width: 55rem;
+    height: 20rem;
+    position: relative;
+    top: 50px;
+    font-family: 'Lusitana', serif;
+    font-weight: bold;
+}
+
+.description {
+    margin-top: 20px;
+    text-align: justify;
+    display: block;
+    padding: 50px;
+    color: white;
+}
+
+.description h2 {
+    font-size:xx-large;
+}
+
+.description p {
+    margin-top: 20px;
+}
+
+.dots {
+    text-align: center;
+    position: relative;
+    bottom: 25px;
+}
+
+.dot {
+    cursor: pointer;
+    height: 8px;
+    width: 8px;
+    margin: 0 25px;
+    background-color: white;
+    border-radius: 50%;
+    display: inline-block;
 }
