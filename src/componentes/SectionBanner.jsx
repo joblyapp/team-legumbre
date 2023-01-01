@@ -12,11 +12,11 @@ export default function SectionBanner () {
                     moverte de tu casa
                     </p>
                 </div>
-                <div class="dots">
-                    <span class="dot"></span>
-                    <span class="dot"></span>
-                    <span class="dot"></span>
-                    <span class="dot"></span>
+                <div className="dots">
+                    <span className="dot"></span>
+                    <span className="dot"></span>
+                    <span className="dot"></span>
+                    <span className="dot"></span>
                 </div>
             </div>
         </section>

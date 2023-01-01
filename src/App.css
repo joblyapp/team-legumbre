@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Lusitana&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kulim+Park:wght@200&display=swap');
 
 
 .bg-home {
@@ -9,6 +10,8 @@
 
 :root {
     --principal: #adf5ff;
+    --lusitana: 'Lusitana', serif;
+    --kulim-park: 'Kulim Park', sans-serif;
 }
 
 .section-gallery {
@@ -60,7 +63,7 @@
 }
 
 .icon-seguro span {
-    font-family: 'Lusitana', serif;
+    font-family: var(--lusitana);
     font-weight: bold;
     font-size: medium;
     color: white;
@@ -127,4 +130,56 @@
     background-color: white;
     border-radius: 50%;
     display: inline-block;
+}
+
+/* Footer */
+
+.box a img{
+    width: 200px;
+    
+}
+
+.box hr{
+    width: 50px;
+    border: solid 1px white;
+    transform: rotate(90deg);
+    left: 180px;
+    position: relative;
+    bottom: 30px;
+}
+
+
+.section-footer {
+    background-color: var(--principal);
+    width: 100%;
+    color: white;
+}
+
+.conteiner-footer {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    margin: auto;
+    font-family: var(--kulim-park);
+    font-weight: lighter;
+}
+
+.group-1 {
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin: auto;
+    padding-bottom: 25px;
+    gap: 2.2rem;
+    text-align: center;
+}
+
+.group-2 {
+    padding: 20px;
+    text-align: justify;
+}
+
+.group-2 p{
+    margin: 15px;
 }

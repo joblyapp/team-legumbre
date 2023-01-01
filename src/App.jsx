@@ -5,6 +5,7 @@ import './App.css'
 import HomeSectionContent from './componentes/HomeSectionContent';
 import GalleryConteiner from './componentes/GalleryConteiner';
 import SectionBanner from './componentes/SectionBanner';
+import Footer from './componentes/Footer';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -15,6 +16,7 @@ function App() {
       <HomeSectionContent></HomeSectionContent>
       <GalleryConteiner></GalleryConteiner>
       <SectionBanner/>
+      <Footer/>
     </div>
     
   )
