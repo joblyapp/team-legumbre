@@ -11,13 +11,17 @@ function App() {
   const [count, setCount] = useState(0)
 
   return (
-    <div className="App bg-[#ADF5FF] h-screen">
+    <>
+    
+    <div className="App bg-[#ADF5FF] h-screen overflow-x-hidden">
       <NavPersonalizado tipoOscuro={false} className="z-50" />
       <HomeSectionContent></HomeSectionContent>
       <GalleryConteiner></GalleryConteiner>
       <SectionBanner/>
       <Footer/>
     </div>
+    </>
+    
     
   )
 }
