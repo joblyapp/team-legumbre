@@ -1,8 +1,7 @@
 import { useEffect } from "react";
 import { useRef, useState } from "react";
 import { AiOutlineMenu} from 'react-icons/ai';
-export default function NavPersonalizado(props = { tipoOscuro: false }) {
-  const { tipoOscuro } = props;
+export default function NavPersonalizado({ tipoOscuro= false }) {
   const pestañas = [
     "Seguros Pesonales",
     "Seguros Agro",
