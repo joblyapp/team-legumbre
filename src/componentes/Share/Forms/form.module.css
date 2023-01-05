@@ -4,10 +4,37 @@
   align-items: center;
 
   width: 100vw;
+  padding: 1rem;
+
+  background-color: var(--color-green-base);
+
+  font-family: 'Roboto Condensed';
 }
 
 .form {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
+}
+
+.policity {
+  display: flex;
+
+  gap: .5rem;
+}
+
+.policity p {
+  flex: 1 1 100%;
+
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 23px;
+
+  color: var(--color-grey-letter);
+}
+
+.policity p a {
+  font-weight: 700;
+  color: var(--color-blue-marine);
 }

@@ -12,14 +12,14 @@ const RegisterForm = () => {
     <div className={styles.fullContainer}>
       <form onSubmit={handleSubmit(registerData)} className={styles.form}>
         <InputForm name={'fullName'} placeholder={'Ej: Tomas Hernandez'} label={'Nombre Completo'} register={register} />
-        <InputForm name={'dob'} label={'Fecha de nacimiento'} register={register} />
+        <InputForm name={'dob'} type={'date'} label={'Fecha de nacimiento'} register={register} />
         <InputForm name={'email'} placeholder={'Ej: example@gmail.com'} label={'Email'} register={register} />
         <InputForm name={'password'} placeholder={'Ingresa contraseña'} label={'Contraseña'} register={register} />
         <InputForm name={'confirmPassword'} placeholder={'Confirmar contraseña'} label={'Confirmar contraseña'} register={register} />
         <InputForm name={'location'} placeholder={'Ej: Tandil, Buenos Aires, Argentina'} label={'Ciudad de residencia'} register={register} />
         <InputForm name={'zip'} placeholder={'Ej: 7000'} label={'Código postal'} register={register} />
-        <div>
-          <InputForm name={'policity'} register={register} />
+        <div className={styles.policity}>
+          <InputForm name={'policity'} type={'checkbox'} register={register} />
           <p>Acepto los <a>términos de uso y condiciones</a></p>
         </div>
         <Button type={'submit'}>Registrarse</Button>

@@ -3,3 +3,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+  --color-grey-letter: ##707070;
+  --color-grey-border: #989898;
+  --color-green-lemon: #EAFCFF;
+  --color-green-base: #ADF5FF;
+  --color-green-dark: #286068;
+  --color-blue-light: #AAA4F2;
+  --color-blue-marine: #130E4A;
+  --color-green-details: #05FF00;
+}
