@@ -22,7 +22,13 @@ const RegisterForm = () => {
           <InputForm name={'policity'} type={'checkbox'} register={register} />
           <p>Acepto los <a>términos de uso y condiciones</a></p>
         </div>
-        <Button type={'submit'}>Registrarse</Button>
+        <div className={styles.buttonContainer}>
+          <Button type={'submit'}>Registrarse</Button>
+        </div>
+        <p>O accede mediante</p>
+        <div className={styles.socialContainer}>
+          google facebook apple
+        </div>
       </form>
     </div>
   );

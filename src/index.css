@@ -5,7 +5,7 @@
 @tailwind utilities;
 
 :root {
-  --color-grey-letter: ##707070;
+  --color-grey-letter: #707070;
   --color-grey-border: #989898;
   --color-green-lemon: #EAFCFF;
   --color-green-base: #ADF5FF;

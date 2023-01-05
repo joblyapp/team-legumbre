@@ -8,21 +8,18 @@
 
 .child {
   flex: 1 0 100%;
+  display: flex;
+  align-items: center;
 
   font-style: normal;
   font-weight: 400;
-  font-size: 1rem;
+  font-size: 1.25rem;
   line-height: 1.5rem;
-  display: flex;
-  align-items: center;
 }
 
 
 label.child {
   padding: 0 .75rem;
-  font-weight: 400;
-  font-size: 1rem;
-  line-height: 1.5rem;
 }
 
 input.child {
@@ -41,10 +38,10 @@ input[name='dob'] {
   flex: initial;
 }
 
-input[type='checkbox'] {
+input[type='checkbox'].child {
   flex: initial;
-  width: 1rem;
-  height: 1rem;
+  width: 1.1rem;
+  height: 1.1rem;
 
   color: var(--color-blue-light);
 }

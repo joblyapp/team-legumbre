@@ -18,23 +18,42 @@
 }
 
 .policity {
+  flex: 1 1 100%;
   display: flex;
 
   gap: .5rem;
 }
 
+.form p,
 .policity p {
   flex: 1 1 100%;
 
   font-style: normal;
   font-weight: 400;
-  font-size: 1rem;
-  line-height: 23px;
-
+  font-size: 1.2rem;
+  line-height: 1.3rem;
   color: var(--color-grey-letter);
 }
 
 .policity p a {
-  font-weight: 700;
+  font-weight: 600;
   color: var(--color-blue-marine);
+}
+
+.buttonContainer {
+  flex: 1 1 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 1rem 0;
+}
+
+.socialContainer {
+  flex: 1 1 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 0 1rem;
 }
