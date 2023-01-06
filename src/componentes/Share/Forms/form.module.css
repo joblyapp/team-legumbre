@@ -13,6 +13,8 @@
 
 .form {
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
   gap: 1rem;
 }
@@ -56,4 +58,9 @@
   align-items: center;
 
   padding: 1rem 0;
+  max-width: 16.25rem;
+}
+
+.socialContainer > img {
+  transform: scale(1);
 }

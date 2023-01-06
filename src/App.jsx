@@ -18,7 +18,6 @@ function App() {
         <SectionBanner/>
         <Footer/>
       </div>
-      <RegisterForm />
     </>
   )
 }
