@@ -88,10 +88,27 @@
 
 @media (max-width: 540px) {
     .box .span-1{
-        left: 110px;
+        left: 6rem;
         top: 20px;
     }
     .group-1 {
-        width: 75%;
+        width: 85%;
+    }
+    .group-2 {
+        width: 100%;
+    }
+}
+
+@media (max-width: 280px) {
+    .group-1 {
+        width: 100%;
+    }
+    .box .span-1{
+        left: 2.5rem;
+    }
+    
+    .box {
+        width: 7rem;
+        font-size: 9px;
     }
 }
