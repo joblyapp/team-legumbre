@@ -6,7 +6,7 @@ function HomeSectionContent() {
 
   return (
     <div className="bg-[#ADF5FF]">
-    <div className="md:px-0 w-full relative overflow-hidden">
+    <div className="md:px-0 w-full relative">
       <div className="bg-home flex flex-col justify-center px-5 bg-no-repeat bg-cover bg-center h-screen md:px-12">
         <h1 className="md:w-1/3 text-6xl text-white pb-3 text-center md:text-left">
           Fácil, cómodo y sencillo
