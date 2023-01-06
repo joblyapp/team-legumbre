@@ -50,8 +50,8 @@ export default function GalleryConteiner () {
         }
     ];
     return (
-        <section class="section-gallery">
-            <div class="conteiner-gallery">
+        <section className="section-gallery">
+            <div className="conteiner-gallery">
                 {arrayGallery.map ((gallery,index) =><GalleryItems key={index} title={gallery.title} icon= {gallery.icon} bgImg={gallery.bgImg}/>)}
             </div>
         </section>
