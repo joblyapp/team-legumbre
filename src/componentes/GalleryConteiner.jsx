@@ -1,4 +1,5 @@
 import '../App.css';
+import styles from "../modul-css/ConteinerGallery.css"
 import GalleryItems from './GalleryItems';
 
 export default function GalleryConteiner () {

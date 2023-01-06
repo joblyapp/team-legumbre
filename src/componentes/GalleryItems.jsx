@@ -1,4 +1,5 @@
 import '../App.css';
+import styles from "../modul-css/GalleryItems.css"
 
 
 export default function GalleryItems (props={title, icon,bgImg}) {

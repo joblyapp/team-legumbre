@@ -1,0 +1,22 @@
+.section-gallery {
+    background-color: var(--principal);
+    width: 154vh;
+    height: 690px;
+    display: flex;
+    background-image: url(../public/imagenes/forma.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position-y: -203px;
+}
+
+
+.conteiner-gallery {
+    padding: 30px;
+    width: 80%;
+    height: auto;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    margin: auto;
+    row-gap: 2rem;
+    margin-top: 100px;
+}
