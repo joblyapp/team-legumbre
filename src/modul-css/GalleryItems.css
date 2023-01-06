@@ -1,0 +1,32 @@
+.items-1 {
+    border-radius: 5%;
+    width: 15rem;
+    height: 10rem;
+    background-repeat: no-repeat;
+    background-size: 100% 10rem;
+    object-fit: cover;
+    margin: auto;
+}
+
+.icon-seguro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.icon-seguro img:nth-child(1) {
+    position: relative;
+    width: 100px;
+    margin-bottom: 10px;
+}
+
+.icon-seguro span {
+    font-family: var(--lusitana);
+    font-weight: bold;
+    font-size: medium;
+    color: white;
+    position: relative;
+    bottom: 10px;
+}
