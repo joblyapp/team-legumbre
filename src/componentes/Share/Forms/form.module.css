@@ -1,16 +1,3 @@
-.fullContainer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  width: 100vw;
-  padding: 1rem;
-
-  background-color: var(--color-green-base);
-
-  font-family: 'Roboto Condensed';
-}
-
 .form {
   display: flex;
   justify-content: center;

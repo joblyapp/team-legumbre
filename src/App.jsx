@@ -6,7 +6,6 @@ import {
   Redirect,
 } from "react-router-dom";
 import NavPersonalizado from "./componentes/puro/NavPersonalizado";
-import Footer from "./componentes/Footer";
 import Landing from "./componentes/Landing";
 import SignUp from "./componentes/SignUp";
 
@@ -20,7 +19,6 @@ function App() {
         <Route path="/register" component={SignUp} />
         <Redirect to="/" />
       </Switch>
-      <Footer />
     </div>
     </Router>
   );
