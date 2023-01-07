@@ -6,25 +6,25 @@ export default function Footer () {
         <footer className="section-footer">
             <div className="conteiner-footer">
                 <div className="group-1">
-                    <div className="box">
+                    <div className="box box-1">
                         <p>Nº de inscripción de ssn <br />
                             1234
                         </p>
-                        <span className="span-1"></span>
+                        <span></span>
                     </div>
-                    <div className="box">
+                    <div className="box box-2">
                         <p>Atención al asegurado<br />
                                 0800-123-1234
                         </p>
-                        <span className="span-2"></span>
+                        
                     </div>
-                    <div className="box">
+                    <div className="box box-3">
                         <p>Organismo de control<br />
                             www.argentina.gob.ar/ssn
                         </p>
-                        <span className="span-3"></span>
+                        
                     </div>
-                    <div className="box">
+                    <div className="box box-4">
                         <a href="#">
                             <img src="../public/imagenes/LogoSSN.png" alt="SSN" />
                         </a>
