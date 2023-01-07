@@ -1,8 +1,7 @@
 /* Footer */
 
 .box a img{
-    width: 200px;
-    
+    width: 200px;   
 }
 
 
@@ -94,6 +93,9 @@
     .box span {
         left: 5rem;
         top: 25px;
+    }
+    .box a img{
+        padding: 1rem;   
     }
     .group-1 {
         font-size: 12px;
