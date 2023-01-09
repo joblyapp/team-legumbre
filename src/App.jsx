@@ -8,13 +8,12 @@ import SectionBanner from './componentes/SectionBanner';
 import Footer from './componentes/Footer';
 
 function App() {
-  const [count, setCount] = useState(0)
-
+  const [scrollY, setScrollY] = useState(0)
   return (
     <>
     
-    <div className="App bg-[#ADF5FF] h-screen overflow-x-hidden">
-      <NavPersonalizado tipoOscuro={false} className="z-50" />
+    <div className="App bg-[#ADF5FF] h-screen overflow-x-hidden" onScroll={e  => setScrollY(e.target.scrollTop)}>
+      <NavPersonalizado tipoOscuro={false} cambiar={true} scrollY={scrollY}/>
       <HomeSectionContent></HomeSectionContent>
       <GalleryConteiner></GalleryConteiner>
       <SectionBanner/>
