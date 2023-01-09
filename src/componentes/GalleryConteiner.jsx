@@ -1,4 +1,5 @@
 import '../App.css';
+import styles from "../modul-css/ConteinerGallery.css"
 import GalleryItems from './GalleryItems';
 
 export default function GalleryConteiner () {
@@ -50,8 +51,8 @@ export default function GalleryConteiner () {
         }
     ];
     return (
-        <section className="section-gallery">
-            <div className="conteiner-gallery">
+        <section class="w-full">
+            <div class="w-full grid grid-cols-1 py-24 gap-8 md:grid-cols-3">
                 {arrayGallery.map ((gallery,index) =><GalleryItems key={index} title={gallery.title} icon= {gallery.icon} bgImg={gallery.bgImg}/>)}
             </div>
         </section>

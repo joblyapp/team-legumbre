@@ -1,4 +1,4 @@
-
+import styles from "../modul-css/SectionBanner.css"
 
 export default function SectionBanner () {
 
