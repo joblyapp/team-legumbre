@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useRef, useState } from "react";
-export default function NavPersonalizado( {tipoOscuro, cambiar , scrollY},) {
-  const [tipoOscuroTema, setTipoOscuroTema] = useState(tipoOscuro)
+export default function NavPersonalizado({ tipoOscuro, cambiar, scrollY }) {
+  const [tipoOscuroTema, setTipoOscuroTema] = useState(tipoOscuro);
   const refNav = useRef();
   const refHeader = useRef();
   const [desplegado, setDesplegado] = useState(false);
@@ -15,19 +15,20 @@ export default function NavPersonalizado( {tipoOscuro, cambiar , scrollY},) {
 
   function manejadorNav() {
     refNav.current.style.display = `${desplegado ? "none" : "flex"}`;
-    refNav.current.style.top = `${refHeader.current.clientHeight}px`
+    refNav.current.style.top = `${refHeader.current.clientHeight}px`;
     setDesplegado(!desplegado);
   }
-  function cambiarColor(){
-    if(cambiar){
-      window.innerHeight> scrollY? setTipoOscuroTema(false) : setTipoOscuroTema(true);
+  function cambiarColor() {
+    if (cambiar) {
+      window.innerHeight > scrollY
+        ? setTipoOscuroTema(false)
+        : setTipoOscuroTema(true);
     }
   }
 
   useEffect(() => {
-    cambiarColor()
-  }, [scrollY])
-  
+    cambiarColor();
+  }, [scrollY]);
 
   return (
     <header
