@@ -41,7 +41,9 @@ input[name='dob'] {
 
 .container:has(input[type='checkbox'])>label.child {
   flex: 1 1 50%;
-  order: 2;
+}
+.container:has(input[type='checkbox'])>input.child {
+  order: -1;
 }
 
 input[type='checkbox'].child {

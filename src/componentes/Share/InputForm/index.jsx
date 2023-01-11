@@ -6,7 +6,6 @@ const InputForm = ({ name, type, label, placeholder, register, error }) => {
       {label && (
         <label htmlFor={name} className={styles.child}>
           {label}
-          {error && <p className={styles.withError}>{error?.message} *</p>}
         </label>
       )}
       <input
@@ -16,6 +15,7 @@ const InputForm = ({ name, type, label, placeholder, register, error }) => {
         placeholder={placeholder}
         {...register(name)}
       />
+      {error && <p className={styles.withError}>{error?.message} *</p>}
     </div>
   );
 };

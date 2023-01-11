@@ -1,6 +1,7 @@
 import styles from "./signup.module.css";
 import { Form } from "../Share";
 import { registerInputs } from "../../Helpers/FormInputs";
+import RegisterValidation from "../../Helpers/FormValidations/RegisterValidation";
 
 const SignUp = () => {
   return (
@@ -21,7 +22,7 @@ const SignUp = () => {
         </div>
       </picture>
       <section className={styles.formContainer}>
-        <Form fields={registerInputs} />
+        <Form fields={registerInputs} schema={RegisterValidation} buttonText="Registrarse" />
       </section>
       <picture className={styles.waveContainer}>
         <source

@@ -1,7 +1,6 @@
 import styles from "./form.module.css";
 import { useForm } from "react-hook-form";
 import { joiResolver } from "@hookform/resolvers/joi";
-import RegisterValidation from "../../../Helpers/FormValidations/RegisterValidation";
 import { Button, InputForm, SocialIcon } from "../index";
 
 const Form = ({ schema, fields, buttonText }) => {
@@ -11,7 +10,7 @@ const Form = ({ schema, fields, buttonText }) => {
     formState: { errors },
   } = useForm({
     node: "onBlur",
-    resolver: joiResolver(schema || RegisterValidation),
+    resolver: schema ? joiResolver(schema) : null,
   });
 
   const registerData = (data) => console.log(data);
@@ -31,7 +30,7 @@ const Form = ({ schema, fields, buttonText }) => {
         )
       })}
       <div className={styles.buttonContainer}>
-        <Button type={"submit"}>{buttonText || "Registrarse"}</Button>
+        <Button type={"submit"}>{buttonText || "Enviar"}</Button>
       </div>
       <p>O accede mediante</p>
       <div className={styles.socialContainer}>
