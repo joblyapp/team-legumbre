@@ -1,0 +1,15 @@
+.basic {
+  flex: 1 1 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: .5rem 1rem;
+
+  border-radius: 20px;
+  background-color: var(--color-blue-light) !important;
+
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: var(--color-blue-marine);
+}

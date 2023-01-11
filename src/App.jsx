@@ -1,29 +1,27 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import NavPersonalizado from './componentes/puro/NavPersonalizado'
-import './App.css'
-import HomeSectionContent from './componentes/HomeSectionContent';
-import GalleryConteiner from './componentes/GalleryConteiner';
-import SectionBanner from './componentes/SectionBanner';
-import Footer from './componentes/Footer';
+import "./App.css";
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch,
+  Redirect,
+} from "react-router-dom";
+import NavPersonalizado from "./componentes/puro/NavPersonalizado";
+import Landing from "./componentes/Landing";
+import SignUp from "./componentes/SignUp";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-    
-    <div className="App bg-[#ADF5FF] h-screen overflow-x-hidden">
-      <NavPersonalizado tipoOscuro={false} className="z-50" />
-      <HomeSectionContent></HomeSectionContent>
-      <GalleryConteiner></GalleryConteiner>
-      <SectionBanner/>
-      <Footer/>
+    <Router>
+    <div className="relative w-full flex flex-wrap">
+      <NavPersonalizado />
+      <Switch>
+        <Route exact path="/" component={Landing} />
+        <Route path="/register" component={SignUp} />
+        <Redirect to="/" />
+      </Switch>
     </div>
-    </>
-    
-    
-  )
+    </Router>
+  );
 }
 
-export default App
+export default App;
