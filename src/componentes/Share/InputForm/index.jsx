@@ -1,7 +1,6 @@
 import styles from "./inputForm.module.css";
 
 const InputForm = ({ name, type, label, placeholder, register, error }) => {
-  console.log({error});
   return (
     <div className={styles.container}>
       {label && (
