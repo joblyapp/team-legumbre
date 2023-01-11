@@ -18,7 +18,12 @@
 }
 
 label.child {
+  gap: .75rem;
   padding: 0 .75rem;
+}
+
+label.child>p {
+  flex: 0 1 50%;
 }
 
 input.child {
@@ -34,8 +39,9 @@ input[name='dob'] {
   text-transform: uppercase;
 }
 
-.container:has(input[type='checkbox']) {
-  flex: initial;
+.container:has(input[type='checkbox'])>label.child {
+  flex: 1 1 50%;
+  order: 2;
 }
 
 input[type='checkbox'].child {
@@ -44,4 +50,11 @@ input[type='checkbox'].child {
   height: 1.1rem;
 
   color: var(--color-blue-light);
+}
+
+input.withError {
+  border-color: var(--color-red-error);
+}
+.withError {
+  color: var(--color-red-error);
 }

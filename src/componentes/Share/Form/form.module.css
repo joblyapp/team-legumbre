@@ -13,8 +13,8 @@
   gap: .5rem;
 }
 
-.form p,
-.policity p {
+.form>p,
+.policity>p {
   flex: 1 1 100%;
 
   font-style: normal;
@@ -24,7 +24,7 @@
   color: var(--color-grey-letter);
 }
 
-.policity p a {
+.policity>p>a {
   font-weight: 600;
   color: var(--color-blue-marine);
 }

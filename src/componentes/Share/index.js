@@ -1,6 +1,6 @@
 import Button from "./Button";
 import InputForm from "./InputForm";
 import SocialIcon from "./SocialIcon";
-import RegisterForm from "./Forms/RegisterForm";
+import Form from "./Form";
 
-export { Button, InputForm, SocialIcon, RegisterForm };
+export { Button, InputForm, SocialIcon, Form };

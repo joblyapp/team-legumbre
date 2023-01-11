@@ -1,5 +1,6 @@
 import styles from "./signup.module.css";
-import { RegisterForm } from "../Share";
+import { Form } from "../Share";
+import { registerInputs } from "../../Helpers/FormInputs";
 
 const SignUp = () => {
   return (
@@ -20,7 +21,7 @@ const SignUp = () => {
         </div>
       </picture>
       <section className={styles.formContainer}>
-        <RegisterForm />
+        <Form fields={registerInputs} />
       </section>
       <picture className={styles.waveContainer}>
         <source
