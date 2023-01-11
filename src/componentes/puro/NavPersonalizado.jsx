@@ -1,11 +1,12 @@
 import { useState } from "react";
 import { AiOutlineMenu } from "react-icons/ai";
+import { Link } from "react-router-dom";
 export default function NavPersonalizado() {
   const [isPageScrolled, setPageScrolled] = useState(false);
 
-  addEventListener('scroll', () => {
-    (window.scrollY > 100) && setPageScrolled(true);
-    (window.scrollY < 100) && setPageScrolled(false);
+  addEventListener("scroll", () => {
+    window.scrollY > 100 && setPageScrolled(true);
+    window.scrollY < 100 && setPageScrolled(false);
   });
 
   const pestañas = [
@@ -39,9 +40,12 @@ export default function NavPersonalizado() {
         {pestañas.map((pestaña, index) => (
           <button key={index}>{pestaña}</button>
         ))}
-        <button className="bg-[#AAA4F2] rounded-2xl  text-[#130E4A]  self-center lg:px-7 lg:py-1.5 lg:ml-2 desk:ml-8">
-          Mis Seguros
-        </button>
+        <Link
+          to="register"
+          className="bg-[#AAA4F2] rounded-2xl  text-[#130E4A]  self-center lg:px-7 lg:py-1.5 lg:ml-2 desk:ml-8"
+        >
+          <button>Mis Seguros</button>
+        </Link>
       </nav>
     </header>
   );

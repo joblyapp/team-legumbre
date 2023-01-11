@@ -1,10 +1,5 @@
 import "./App.css";
-import {
-  BrowserRouter as Router,
-  Route,
-  Switch,
-  Redirect,
-} from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import NavPersonalizado from "./componentes/puro/NavPersonalizado";
 import Landing from "./componentes/Landing";
 import SignUp from "./componentes/SignUp";
@@ -12,14 +7,13 @@ import SignUp from "./componentes/SignUp";
 function App() {
   return (
     <Router>
-    <div className="relative w-full flex flex-wrap">
-      <NavPersonalizado />
-      <Switch>
-        <Route exact path="/" component={Landing} />
-        <Route path="/register" component={SignUp} />
-        <Redirect to="/" />
-      </Switch>
-    </div>
+      <div className="relative w-full flex flex-wrap">
+        <NavPersonalizado />
+        <Routes>
+          <Route exact path="/" element={<Landing />} />
+          <Route path="/register" element={<SignUp />} />
+        </Routes>
+      </div>
     </Router>
   );
 }
