@@ -1,8 +1,10 @@
 import "./App.css";
+import { lazy } from 'react';
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import NavPersonalizado from "./componentes/puro/NavPersonalizado";
-import Landing from "./componentes/Landing";
-import SignUp from "./componentes/SignUp";
+
+const Landing = lazy(() => import("./componentes/Landing"));
+const SignUp = lazy(() => import("./componentes/SignUp"));
 
 function App() {
   return (
