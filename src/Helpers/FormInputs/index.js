@@ -51,4 +51,25 @@ export const registerInputs = [
   },
 ];
 
+export const loginInputs = [
+  {
+    name: "email",
+    type: "email",
+    placeholder: "Ej: example@gmail.com",
+    label: "Email",
+  },
+
+  {
+    name: "password",
+    type: "password",
+    placeholder: "Ingresa contraseña",
+    label: "Contraseña",
+  },
+
+  {
+    name: "sesion",
+    type: "checkbox",
+    label: "Mantener sesión iniciada.",
+  }
+];
 
