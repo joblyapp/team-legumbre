@@ -38,7 +38,9 @@ export default function NavPersonalizado() {
         }
       >
         {pestañas.map((pestaña, index) => (
-          <button key={index}>{pestaña}</button>
+          <button key={index}>
+            <Link to="servicios">{pestaña}</Link>
+          </button>
         ))}
         <Link
           to="register"
