@@ -1,0 +1,62 @@
+.container {
+  flex: 1 1 100%;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: .5rem;
+}
+
+.child {
+  flex: 1 0 100%;
+  display: flex;
+  align-items: center;
+
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+label.child {
+  gap: .75rem;
+  padding: 0 .75rem;
+}
+
+label.child>p {
+  flex: 0 1 50%;
+}
+
+input.child {
+  padding: .5rem 1rem;
+  border: 1px solid var(--color-grey-border);
+  border-radius: 10px;
+  color: var(--color-grey-letter);
+}
+
+input[name='zip'],
+input[name='dob'] {
+  max-width: 10.5rem;
+  text-transform: uppercase;
+}
+
+.container:has(input[type='checkbox'])>label.child {
+  flex: 1 1 50%;
+}
+.container:has(input[type='checkbox'])>input.child {
+  order: -1;
+}
+
+input[type='checkbox'].child {
+  flex: initial;
+  width: 1.1rem;
+  height: 1.1rem;
+
+  color: var(--color-blue-light);
+}
+
+input.withError {
+  border-color: var(--color-red-error);
+}
+.withError {
+  color: var(--color-red-error);
+}

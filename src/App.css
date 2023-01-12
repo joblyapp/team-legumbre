@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Lusitana&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kulim+Park:wght@200&display=swap');
+
+
+.bg-home {
+    background-image: url('/src/assets/img/bg-image-home.jpg');
+}
+
+
+:root {
+    --principal: #adf5ff;
+    --lusitana: 'Lusitana', serif;
+    --kulim-park: 'Kulim Park', sans-serif;
+}
+
+
+

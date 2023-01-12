@@ -1,3 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lusitana:wght@700&family=M+PLUS+2&family=Roboto+Condensed&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+  --color-white: #ffffff;
+  --color-green-lemon: #EAFCFF;
+  --color-grey-border: #989898;
+  --color-grey-letter: #707070;
+  --color-black: #000000;
+  --color-green-base: #ADF5FF;
+  --color-green-dark: #286068;
+  --color-blue-light: #AAA4F2;
+  --color-blue-marine: #130E4A;
+  --color-green-details: #05FF00;
+
+  --color-red-error: rgb(230, 93, 93);
+}
