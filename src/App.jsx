@@ -9,7 +9,7 @@ function App() {
   return (
     <Router>
       <div className="relative w-full flex flex-wrap">
-        <NavPersonalizado />
+        <NavPersonalizado tipoOscuro={false}  cambiar={true}/>
         <Routes>
           <Route exact path="/" element={<Landing />} />
           <Route path="/register" element={<SignUp />} />
