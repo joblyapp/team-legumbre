@@ -1,28 +1,22 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import NavPersonalizado from './componentes/puro/NavPersonalizado'
-import './App.css'
-import HomeSectionContent from './componentes/HomeSectionContent';
-import GalleryConteiner from './componentes/GalleryConteiner';
-import SectionBanner from './componentes/SectionBanner';
-import Footer from './componentes/Footer';
+import "./App.css";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import NavPersonalizado from "./componentes/puro/NavPersonalizado";
+
+import Landing from "./componentes/Landing";
+import SignUp from "./componentes/SignUp";
 
 function App() {
-  const [scrollY, setScrollY] = useState(0)
   return (
-    <>
-    
-    <div className="App bg-[#ADF5FF] h-screen overflow-x-hidden" onScroll={e  => setScrollY(e.target.scrollTop)}>
-      <NavPersonalizado tipoOscuro={false} cambiar={true} scrollY={scrollY}/>
-      <HomeSectionContent></HomeSectionContent>
-      <GalleryConteiner></GalleryConteiner>
-      <SectionBanner/>
-      <Footer/>
-    </div>
-    </>
-    
-    
-  )
+    <Router>
+      <div className="relative w-full flex flex-wrap">
+        <NavPersonalizado />
+        <Routes>
+          <Route exact path="/" element={<Landing />} />
+          <Route path="/register" element={<SignUp />} />
+        </Routes>
+      </div>
+    </Router>
+  );
 }
 
-export default App
+export default App;

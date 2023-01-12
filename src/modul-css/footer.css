@@ -7,9 +7,6 @@
 
 .box {
     border-right: solid 1px white;
-    height: fit-content;
-    padding: 1rem;
-    height: 2rem;
 }
 .box-4 {
     border-right: none;
@@ -56,7 +53,7 @@
     margin: 15px;
 }
 
-@media (max-width: 769px) {
+@media (max-width: 765px) {
     .group-1 {
         width: 100%;
         grid-template-columns: repeat(2, 1fr);
@@ -65,8 +62,7 @@
     }
     
     .box {
-        border-right: none;
-        padding: 2.5rem;
+        border-color: black;
     }
     
     .box-1 span {
@@ -80,7 +76,10 @@
         align-items: center;
         transform: rotate(-90deg);
     }
-    
+
+    .box-border-none {
+        border:none
+    }
     
     .group-2 {
         color: black;
@@ -101,10 +100,6 @@
         font-size: 12px;
         width: 100%;
     }
-    .box {
-        padding: 0;
-    }
 
-    
 }
 
