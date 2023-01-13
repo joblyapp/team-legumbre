@@ -18,7 +18,7 @@ const RegisterValidation = Joi.object({
       'string.max': 'Máximo 30 caracteres.'
     }),
   dob: Joi.date()
-    .less(`${actualDay}-${actualMonth}-${actualYear - 18}`)
+    // .less(`${actualDay}-${actualMonth}-${actualYear - 18}`)
     .required()
     .messages({
       'any.required': 'Campo obligatorio.',

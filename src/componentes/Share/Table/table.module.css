@@ -1,9 +1,13 @@
 .table {
   flex: 1 1 100%;
   width: 100%;
-  border: 1px solid var(--color-green-dark);
   border-radius: 5px;
   background-color: var(--color-green-lemon);
+}
+
+.table:nth-of-type(1)>thead,
+.table:nth-of-type(1)>thead>tr {
+  border-radius: 5px;
 }
 
 .firstRow>th {
@@ -67,6 +71,9 @@
   width: 100%;
   padding: 2rem 3rem;
   padding-top: 0;
+
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
 }
 .thInfoContainer>h3 {
   font-weight: 400;
@@ -94,7 +101,7 @@
     display: table-row;
     padding: 1.25rem;
 
-    font-size: 2.25rem;
+    font-size: 2rem;
   }
 
   .thInfoContainer>h3 {
@@ -105,7 +112,12 @@
     font-size: 20px;
   }
   .thInfoContainer>h4 {
-    font-size: 3rem;
+    font-size: 2.5rem;
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    flex-wrap: wrap;
+
   }
 
   .inactive {

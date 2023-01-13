@@ -21,11 +21,13 @@ export default function NavPersonalizado() {
     <header
       className={`fixed w-full flex flex-row basis-[100vw] font-jost text-[24px] justify-between px-[5%] pt-2 lg:text-[17px] xl:text-[22px]  desk:text-[24px] z-50 `}
     >
-      <img
-        className="h-[80px] lg:h-[85px] xl:h-[105px] desk:h-full"
-        src={`/imagenes/logo-nav-${isPageScrolled ? "negro" : "blanco"}.png`}
-        alt="logo-nav"
-      />
+      <Link to="/">
+        <img
+          className="h-[80px] lg:h-[85px] xl:h-[105px] desk:h-full"
+          src={`/imagenes/logo-nav-${isPageScrolled ? "negro" : "blanco"}.png`}
+          alt="logo-nav"
+        />
+      </Link>
       <AiOutlineMenu
         className={`fill-${
           isPageScrolled ? "black" : "white"
@@ -39,11 +41,11 @@ export default function NavPersonalizado() {
       >
         {pestañas.map((pestaña, index) => (
           <button key={index}>
-            <Link to="servicios">{pestaña}</Link>
+            <Link to="/servicios/home">{pestaña}</Link>
           </button>
         ))}
         <Link
-          to="register"
+          to="registro"
           className="bg-[#AAA4F2] rounded-2xl  text-[#130E4A]  self-center lg:px-7 lg:py-1.5 lg:ml-2 desk:ml-8"
         >
           <button>Mis Seguros</button>
