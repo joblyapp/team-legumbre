@@ -115,14 +115,13 @@ section.middleTitle {
   }
 
   .heroTitle {
-    max-width: 50%;
     font-weight: 700;
     font-size: 4rem;
     line-height: 4.25rem;
   }
 
   .heroDescription {
-    max-width: 70%;
+    max-width: 80%;
     display: flex;
     font-weight: 400;
     font-size: 28px;

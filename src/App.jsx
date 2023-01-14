@@ -24,8 +24,8 @@ function App() {
                   element={
                     <Seguros
                       source={source}
-                      titulo={titulo}
-                      descripcion={descripcion}
+                      title={titulo}
+                      description={descripcion}
                     />
                   }
                 />
