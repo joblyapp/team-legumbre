@@ -21,33 +21,53 @@ export default function NavPersonalizado({ tipoOscuro, cambiar }) {
     setIsOpen(!isOpen);
   }
 
-  const pestanias=[
+  const pestanias = [
     {
-      title:"Seguros Pesonales",
-      subPestania:["NaN","NaN"],
-      redirect:["/","/"]
+      title: "Seguros Pesonales",
+      subPestania: [
+        "Hogares",
+        "Automotores",
+        "Motovehículos",
+        "Embarcaciones",
+        "Personales",
+      ],
+      redirect: [
+        "/servicios/casa",
+        "/servicios/auto",
+        "/servicios/moto",
+        "/servicios/embarcaciones",
+        "/servicios/personales",
+      ],
+    },
+    {
+      title: "Seguros Empresas",
+      subPestania: [
+        "Agrícola",
+        "Comercios",
+        "Trasportistas",
+        "Electrodoméstricos",
+      ],
+      redirect: [
+        "/servicios/agricola",
+        "/servicios/agricola",
+        "/servicios/transporte",
+        "/servicios/tecnico",
+      ],
+    },
+    {
+      title: "Siniestros",
+      redirect: "/",
+    },
+    {
+      title: "Quienes Somos",
+      redirect: "/",
+    },
+    {
+      title: "Contacto",
+      redirect: "/",
+    },
+  ];
 
-    },
-    {
-      title:"Seguros Empresas",
-      subPestania:["NaN","NaN"],
-      redirect:["/","/"]
-    },
-    {
-      title:"Siniestros",
-      redirect:"/"
-    },
-    {
-      title:"Quienes Somos",
-      redirect:"/"
-    },
-    {
-      title:"Contacto",
-      redirect:"/"
-    }
-  ]
-    
-    
   return (
     <header
       className={`fixed w-full flex flex-row  font-jost text-[20px] justify-between px-[5%] pt-1 lg:text-[17px] xl:text-[22px]  desk:text-[24px] z-50 ${
@@ -69,7 +89,7 @@ export default function NavPersonalizado({ tipoOscuro, cambiar }) {
         ref={refNav}
       >
         {pestanias.map((pestania, index) => (
-          <Pestania key={index} pestania={pestania} darkTheme={darkTheme}/>
+          <Pestania key={index} pestania={pestania} darkTheme={darkTheme} />
         ))}
         <Link
           to="register"
