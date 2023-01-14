@@ -1,28 +1,8 @@
 import styles from "./table.module.css";
 
+import { checkIcon, planes } from "../../../Helpers/Table";
+
 const Table = ({ plan }) => {
-
-  const planes = [
-    {
-      titulo: "Básico",
-      descripcion: "Ideal económico",
-      precio: "7,499$",
-      type: "basic",
-    },
-    {
-      titulo: "Pro",
-      descripcion: "Profesional",
-      precio: "9,799$",
-      type: "pro",
-    },
-    {
-      titulo: "Pro +",
-      descripcion: "Profesional todo incluido",
-      precio: "11,299$",
-      type: "proPlus",
-    },
-  ];
-
   const beneficios = [
     {
       titulo: "Lorem ipsus",
@@ -30,9 +10,37 @@ const Table = ({ plan }) => {
       pro: plan === "pro" ? true : false,
       proPlus: plan === "proPlus" ? true : false,
     },
+    {
+      titulo: "Lorem ipsus",
+      basic: plan === "basic" ? true : false,
+      pro: plan === "pro" ? true : false,
+      proPlus: plan === "proPlus" ? true : false,
+    },
+    {
+      titulo: "Lorem ipsus",
+      basic: plan === "basic" ? true : false,
+      pro: plan === "pro" ? true : false,
+      proPlus: plan === "proPlus" ? true : false,
+    },
+    {
+      titulo: "Lorem ipsus",
+      basic: plan === "basic" ? true : false,
+      pro: plan === "pro" ? true : false,
+      proPlus: plan === "proPlus" ? true : false,
+    },
+    {
+      titulo: "Lorem ipsus",
+      basic: plan === "basic" ? true : false,
+      pro: plan === "pro" ? true : false,
+      proPlus: plan === "proPlus" ? true : false,
+    },
+    {
+      titulo: "Lorem ipsus",
+      basic: plan === "basic" ? true : false,
+      pro: plan === "pro" ? true : false,
+      proPlus: plan === "proPlus" ? true : false,
+    },
   ];
-
-  const checkIcon = "✔";
 
   return (
     <>

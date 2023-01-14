@@ -36,7 +36,7 @@ const Seguros = ({ source, title, description }) => {
       <section className={styles.middleTitle}>
         <h3>Paquetes y coberturas</h3>
       </section>
-      <section className={`${styles.buttons}`}>
+      <section className={`${styles.buttons} relative z-20`}>
         <button
           className={`${
             plan === "basic" ? styles.active : styles.inactive
