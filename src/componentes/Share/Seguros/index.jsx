@@ -20,18 +20,15 @@ const Seguros = ({ source, title, description }) => {
           />
           <img
             src={`/imagenes/servicios/${source}-desktop.png`}
-            alt={`${source}`}
+            alt={`Portada de ${source || "servicio"}`}
             className="w-full"
           />
         </picture>
         <div className={styles.heroInfo}>
-          <h2 className={styles.heroTitle}>
-            {title || "Seguros para Hogares"}
-          </h2>
+          <h2 className={styles.heroTitle}>{title || "Título del Servicio"}</h2>
           {description && (
             <p className={styles.heroDescription}>
-              {description ||
-                "Permitinos dejarte tranquilo, nosotros nos encargamos de la seguridad de tu auto"}
+              {description || "Descripción del servicio a prestar"}
             </p>
           )}
         </div>

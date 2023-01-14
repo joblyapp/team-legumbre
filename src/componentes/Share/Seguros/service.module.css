@@ -96,7 +96,7 @@ section.middleTitle {
   color: var(--color-green-dark);
 }
 
-@media screen and (min-width: 490px) {
+@media screen and (min-width: 700px) {
   section.heroImage>.heroInfo {
     top: 2rem;
     left: 2rem;
@@ -109,7 +109,7 @@ section.middleTitle {
   }
 }
 
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1024px) {
   .fullContainer {
     padding: 8rem 2.5rem 5rem 2.5rem;
   }
