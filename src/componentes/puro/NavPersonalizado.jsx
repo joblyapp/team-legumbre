@@ -49,7 +49,7 @@ export default function NavPersonalizado({ tipoOscuro, cambiar }) {
       ],
       redirect: [
         "/servicios/agricola",
-        "/servicios/agricola",
+        "/servicios/comercio",
         "/servicios/transporte",
         "/servicios/tecnico",
       ],
