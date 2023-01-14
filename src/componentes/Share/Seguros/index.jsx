@@ -2,7 +2,7 @@ import styles from "./service.module.css";
 import { useState } from "react";
 import { Table } from "../index";
 
-const Seguros = ({ source }) => {
+const Seguros = ({ source, title, description }) => {
   const [plan, setPlan] = useState("basic");
 
   return (
@@ -12,11 +12,11 @@ const Seguros = ({ source }) => {
         alt="decorative wave"
         className="w-full h-auto absolute top-0 left-0 z-0"
       />
-      <section className="relative flex">
-        <picture className="w-full">
+      <section className={styles.heroImage}>
+        <picture className="w-full h-full">
           <source
             srcSet={`/imagenes/servicios/${source}-mobile.png`}
-            media="(max-width: 1024px)"
+            media="(max-width: 1023px)"
           />
           <img
             src={`/imagenes/servicios/${source}-desktop.png`}
@@ -24,9 +24,19 @@ const Seguros = ({ source }) => {
             className="w-full"
           />
         </picture>
-        <h2 className="absolute top-0 left-0 p-4 flex-[1 1 50%]">Seguro</h2>
+        <div className={styles.heroInfo}>
+          <h2 className={styles.heroTitle}>
+            {title || "Seguros para Hogares"}
+          </h2>
+          {description && (
+            <p className={styles.heroDescription}>
+              {description ||
+                "Permitinos dejarte tranquilo, nosotros nos encargamos de la seguridad de tu auto"}
+            </p>
+          )}
+        </div>
       </section>
-      <section>
+      <section className={styles.middleTitle}>
         <h3>Paquetes y coberturas</h3>
       </section>
       <section className={`${styles.buttons}`}>

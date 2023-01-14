@@ -6,7 +6,6 @@ import Landing from "./componentes/Landing";
 import SignUp from "./componentes/SignUp";
 import { Seguros } from "./componentes/Share";
 
-
 function App() {
   return (
     <Router>
@@ -16,7 +15,15 @@ function App() {
           <Route exact path="/" element={<Landing />} />
           <Route path="/registro" element={<SignUp />} />
           <Route path="/servicios">
-            <Route path="/servicios/home" element={<Seguros source="casa" />} />
+            <Route
+              path="/servicios/home"
+              element={
+                <Seguros
+                  source="casa"
+                  description="Permitinos dejarte tranquilo, nosotros nos encargamos de la seguridad de tu auto"
+                />
+              }
+            />
           </Route>
         </Routes>
       </div>
