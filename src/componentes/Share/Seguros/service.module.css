@@ -1,0 +1,138 @@
+.fullContainer {
+  flex: 1 1 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+
+  padding: 8rem 1.5rem 5rem 1.5rem;
+  background-color: var(--color-green-base);
+}
+
+.fullContainer>section {
+  flex: 1 1 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+section.heroImage {
+  flex: 1 1 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  color: var(--color-white);
+}
+
+section.heroImage>.heroInfo {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: .25rem;
+
+  max-width: 60%;
+  height: 80%;
+}
+
+.heroTitle {
+  max-width: 80%;
+  font-weight: 600;
+  font-size: 1.5rem;
+  line-height: 1.75rem;
+}
+
+.heroDescription {
+  display: none;
+}
+
+section.middleTitle {
+  justify-content: flex-start;
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
+.buttons {
+  flex: 1 1 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 8px;
+}
+
+.buttons>button {
+  flex: 1 1 100%;
+}
+
+.buttons>button:nth-of-type(1) {
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+
+.buttons>button:nth-of-type(3) {
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.active,
+.inactive {
+  border: 1px solid var(--color-green-dark);
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.active {
+  background-color: var(--color-green-dark);
+  color: var(--color-white);
+}
+
+.inactive {
+  background-color: var(--color-green-lemon);
+  color: var(--color-green-dark);
+}
+
+@media screen and (min-width: 700px) {
+  section.heroImage>.heroInfo {
+    top: 2rem;
+    left: 2rem;
+  }
+
+  .heroTitle {
+    font-weight: 700;
+    font-size: 3rem;
+    line-height: 3.25rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .fullContainer {
+    padding: 8rem 2.5rem 5rem 2.5rem;
+  }
+
+  .heroTitle {
+    font-weight: 700;
+    font-size: 4rem;
+    line-height: 4.25rem;
+  }
+
+  .heroDescription {
+    max-width: 80%;
+    display: flex;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 41px;
+  }
+
+  .fullContainer>section.buttons {
+    display: none;
+  }
+
+  section.middleTitle {
+    display: none;
+  }
+}
