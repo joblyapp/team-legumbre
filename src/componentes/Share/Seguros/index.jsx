@@ -1,6 +1,7 @@
 import styles from "./service.module.css";
 import { useState } from "react";
 import { Table } from "../index";
+import { Link } from "react-router-dom";
 
 const Seguros = ({ source, title, description }) => {
   const [plan, setPlan] = useState("basic");
@@ -65,6 +66,12 @@ const Seguros = ({ source, title, description }) => {
       <section className="w-full flex-col">
         <Table plan={plan} />
       </section>
+      <Link
+        to="/"
+        className={`sm:flex hidden w-full py-4 rounded-[20px] justify-center bg-[var(--color-blue-light)] text-[var(--color-blue-marine)] text-4xl font-[Roboto]`}
+      >
+        ¡Cotizá ahora!
+      </Link>
     </div>
   );
 };

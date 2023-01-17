@@ -3,6 +3,7 @@ import Joi from 'joi';
 const actualYear = new Date().getUTCFullYear();
 const actualMonth = new Date().getUTCMonth() + 1;
 const actualDay = new Date().getUTCDate();
+const mayority = `${actualMonth}-${actualDay}-${actualYear - 18}`;
 
 const RegisterValidation = Joi.object({
   fullName: Joi.string()
@@ -18,7 +19,7 @@ const RegisterValidation = Joi.object({
       'string.max': 'Máximo 30 caracteres.'
     }),
   dob: Joi.date()
-    // .less(`${actualDay}-${actualMonth}-${actualYear - 18}`)
+    .less(`${mayority}`)
     .required()
     .messages({
       'any.required': 'Campo obligatorio.',

@@ -70,8 +70,8 @@ export default function NavPersonalizado({ tipoOscuro, cambiar }) {
 
   return (
     <header
-      className={`fixed w-full flex flex-row  font-jost text-[20px] justify-between px-[5%] pt-1 lg:text-[17px] xl:text-[22px]  desk:text-[24px] z-50 ${
-        darkTheme ? "bg-none" : "bg-[#4F4F4F]"
+      className={`sticky top-0 left-0 w-full flex flex-row  font-jost text-[20px] justify-between px-[5%] pt-1 lg:text-[17px] xl:text-[22px]  desk:text-[24px] z-50 ${
+        darkTheme ? "bg-[var(--color-green-base)]" : "bg-[#4F4F4F]"
       }`}
       ref={refHeader}
     >
@@ -83,16 +83,14 @@ export default function NavPersonalizado({ tipoOscuro, cambiar }) {
         />
       </Link>
       <nav
-        className={`hidden flex-col gap-1 px-4 pb-4 absolute right-0 text-${
-          darkTheme ? "black bg-none" : "white bg-[#4F4F4F]"
-        } md:p-0 md:!flex md:static md:flex-row md:justify-center md:align-middle md:gap-7 xl:gap-9 `}
+        className={`hidden flex-col gap-1 px-4 pb-4 absolute right-0 text-${darkTheme ? "black bg-none" : "white bg-[#4F4F4F]"} md:p-0 md:!flex md:static md:flex-row md:justify-center md:align-middle md:gap-7 xl:gap-9 `}
         ref={refNav}
       >
         {pestanias.map((pestania, index) => (
           <Pestania key={index} pestania={pestania} darkTheme={darkTheme} />
         ))}
         <Link
-          to="register"
+          to="registro"
           className="bg-[#AAA4F2] rounded-2xl px-7 text-[#130E4A]  self-center md:block  lg:py-1.5 lg:ml-2 desk:ml-8"
         >
           Mis Seguros
