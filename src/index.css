@@ -6,15 +6,15 @@
 
 :root {
   --color-white: #ffffff;
-  --color-green-lemon: #EAFCFF;
   --color-grey-border: #989898;
   --color-grey-letter: #707070;
   --color-black: #000000;
   --color-green-base: #ADF5FF;
-  --color-green-dark: #286068;
   --color-blue-light: #AAA4F2;
   --color-blue-marine: #130E4A;
+  --color-green-lemon: #EAFCFF;
   --color-green-details: #05FF00;
+  --color-green-dark: #286068;
 
   --color-red-error: rgb(230, 93, 93);
 }

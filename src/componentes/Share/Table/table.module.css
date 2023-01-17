@@ -1,0 +1,126 @@
+.table {
+  flex: 1 1 100%;
+  width: 100%;
+  border-radius: 5px;
+  background-color: var(--color-green-lemon);
+}
+
+.table:nth-of-type(1)>thead,
+.table:nth-of-type(1)>thead>tr {
+  border-radius: 5px;
+}
+
+.firstRow>th {
+  border-width: 5px 1px .5px 1px;
+  border-style: solid;
+}
+.firstRow>th:nth-of-type(1) {
+  border: none;
+}
+.firstRow>th:nth-of-type(2) {
+  border-color: var(--color-green-details);
+}
+.firstRow>th:nth-of-type(3) {
+  border-color: #2400FF;
+}
+.firstRow>th:nth-of-type(4) {
+  border-color: #CC00FF;
+}
+
+.tableBox {
+  border: .5px solid var(--color-green-dark);
+  border-left-width: 1px;
+
+  font-weight: 400;
+  font-size: 1rem;
+  color: var(--color-black);
+}
+
+.firstRow {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(0,1fr)
+  );
+  width: 100%;
+}
+
+.firstTableHeader {
+  display: none;
+}
+
+.fullTableRow {
+  width: 100%;
+  padding: .5rem;
+  background-color: var(--color-green-dark);
+
+  font-weight: 600;
+  font-size: 1rem;
+  text-align: start;
+  color: var(--color-white);
+}
+
+.inactive {
+  display: none;
+}
+
+.thInfoContainer {
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+  padding: 2rem 3rem;
+  padding-top: 0;
+
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+.thInfoContainer>h3 {
+  font-weight: 400;
+  font-size: 1.5rem;
+}
+.thInfoContainer>p {
+  transform: translateY(-.35rem);
+
+  font-weight: 400;
+  font-size: 14px;
+  color: var(--color-grey-letter);
+}
+.thInfoContainer>h4 {
+  font-weight: 400;
+  font-size: 32px;
+}
+.thInfoContainer>h4>span {
+  font-weight: 400;
+  font-size: .75rem;
+  color: var(--color-grey-letter);
+}
+
+@media screen and (min-width: 1024px) {
+  .firstTableHeader {
+    display: table-row;
+    padding: 1.25rem;
+
+    font-size: 2rem;
+  }
+
+  .thInfoContainer>h3 {
+    font-size: 2.25rem;
+  }
+  .thInfoContainer>p,
+  .thInfoContainer>h4>span {
+    font-size: 20px;
+  }
+  .thInfoContainer>h4 {
+    font-size: 2.5rem;
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    flex-wrap: wrap;
+
+  }
+
+  .inactive {
+    display: flex;
+  }
+}
