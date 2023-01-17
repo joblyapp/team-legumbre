@@ -12,7 +12,10 @@
     border-right: none;
 }
 
+
+
 .section-footer {
+    margin-top: 100px;
     background-color: var(--principal);
     width: 100%;
     color: white;
@@ -89,10 +92,6 @@
 }
 
 @media (max-width: 375px) {
-    .box span {
-        left: 5rem;
-        top: 25px;
-    }
     .box a img{
         padding: 1rem;   
     }
