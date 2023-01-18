@@ -1,0 +1,34 @@
+.fullContainer {
+  flex: 1 1 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+
+  padding: 8rem 1.5rem 5rem 1.5rem;
+  background-color: var(--color-green-base);
+}
+
+.fullContainer>section {
+  flex: 1 1 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+section.middleTitle {
+  justify-content: flex-start;
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .fullContainer {
+    padding: 8rem 2.5rem 5rem 2.5rem;
+  }
+
+  section.middleTitle {
+    display: none;
+  }
+}

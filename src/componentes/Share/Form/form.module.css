@@ -1,0 +1,61 @@
+.form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+
+  position: relative;
+  z-index: 15;
+}
+
+.form input[name="zip"],
+.form input[name="dob"] {
+  max-width: 10.5rem;
+}
+
+.policity {
+  flex: 1 1 100%;
+  display: flex;
+
+  gap: .5rem;
+}
+
+.form>p,
+.policity>p {
+  flex: 1 1 100%;
+
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.2rem;
+  line-height: 1.3rem;
+  color: var(--color-grey-letter);
+}
+
+.policity>p>a {
+  font-weight: 600;
+  color: var(--color-blue-marine);
+}
+
+.buttonContainer {
+  flex: 1 1 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 1rem 0;
+}
+
+.socialContainer {
+  flex: 1 1 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 1rem 0;
+  max-width: 16.25rem;
+}
+
+.socialContainer > img {
+  transform: scale(1);
+}

@@ -1,28 +1,44 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import NavPersonalizado from './componentes/puro/NavPersonalizado'
-import './App.css'
-import HomeSectionContent from './componentes/HomeSectionContent';
-import GalleryConteiner from './componentes/GalleryConteiner';
-import SectionBanner from './componentes/SectionBanner';
-import Footer from './componentes/Footer';
+import "./App.css";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import NavPersonalizado from "./componentes/puro/NavPersonalizado";
+
+import Landing from "./componentes/Landing";
+import SignUp from "./componentes/SignUp";
+import { Seguros, QuoteCarForm } from "./componentes/Share";
+import Contact from './componentes/contact/Contact'
+import { servicios } from "./Helpers/Servicios";
 
 function App() {
-  const [scrollY, setScrollY] = useState(0)
   return (
-    <>
-    
-    <div className="App bg-[#ADF5FF] h-screen overflow-x-hidden" onScroll={e  => setScrollY(e.target.scrollTop)}>
-      <NavPersonalizado tipoOscuro={false} cambiar={true} scrollY={scrollY}/>
-      <HomeSectionContent></HomeSectionContent>
-      <GalleryConteiner></GalleryConteiner>
-      <SectionBanner/>
-      <Footer/>
-    </div>
-    </>
-    
-    
-  )
+    <Router>
+      <div className="relative w-full flex flex-wrap">
+        <NavPersonalizado tipoOscuro={false} cambiar={true} />
+        <Routes>
+          <Route exact path="/" element={<Landing />} />
+          <Route path="/registro" element={<SignUp />} />
+          <Route path="/contacto" element={<Contact />} />
+          <Route path="/servicios">
+            {servicios.map((service) => {
+              const { titulo, descripcion, source } = service;
+              return (
+                <Route
+                  path={`/servicios/${source}`}
+                  element={
+                    <Seguros
+                      source={source}
+                      title={titulo}
+                      description={descripcion}
+                    />
+                  }
+                />
+              );
+            })}
+            <Route path="/servicios/auto/cotizar" element={<QuoteCarForm />} />
+          </Route>
+        </Routes>
+      </div>
+    </Router>
+  );
 }
 
-export default App
+export default App;
