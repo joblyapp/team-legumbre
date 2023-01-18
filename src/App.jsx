@@ -1,6 +1,7 @@
 import "./App.css";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import NavPersonalizado from "./componentes/puro/NavPersonalizado";
+import Footer from "./componentes/Footer";
 
 import Landing from "./componentes/Landing";
 import SignUp from "./componentes/SignUp";
@@ -8,10 +9,11 @@ import Contact from './componentes/contact/Contact'
 import { Seguros } from "./componentes/Share";
 import { servicios } from "./Helpers/Servicios";
 
+
 function App() {
   return (
     <Router>
-      <div className="relative w-full flex flex-wrap">
+      <div className="relative w-full flex flex-wrap bg-[var(--color-green-base)]">
         <NavPersonalizado tipoOscuro={false} cambiar={true} />
         <Routes>
           <Route exact path="/" element={<Landing />} />
@@ -35,6 +37,7 @@ function App() {
             })}
           </Route>
         </Routes>
+        <Footer/>
       </div>
     </Router>
   );
