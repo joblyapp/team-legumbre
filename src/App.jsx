@@ -5,6 +5,7 @@ import Footer from "./componentes/Footer";
 
 import Landing from "./componentes/Landing";
 import SignUp from "./componentes/SignUp";
+import Contact from './componentes/contact/Contact'
 import { Seguros } from "./componentes/Share";
 import { servicios } from "./Helpers/Servicios";
 
@@ -17,6 +18,7 @@ function App() {
         <Routes>
           <Route exact path="/" element={<Landing />} />
           <Route path="/registro" element={<SignUp />} />
+          <Route path="/contacto" element={<Contact />} />
           <Route path="/servicios">
             {servicios.map((service) => {
               const { titulo, descripcion, source } = service;

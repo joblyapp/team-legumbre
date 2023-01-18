@@ -23,35 +23,35 @@ export default function NavPersonalizado({ tipoOscuro, cambiar }) {
 
   const pestanias = [
     {
-      title: "Seguros Pesonales",
+      title: "Seguros Personales",
       subPestania: [
-        "Hogares",
         "Automotores",
         "Motovehículos",
-        "Embarcaciones",
-        "Personales",
+        "Accidentes Personales",
+        "Integral Comercio",
+        "Combinado Familiar",
       ],
       redirect: [
-        "/servicios/casa",
         "/servicios/auto",
         "/servicios/moto",
-        "/servicios/embarcaciones",
         "/servicios/personales",
+        "/servicios/comercio",
+        "/servicios/casa",
       ],
     },
     {
       title: "Seguros Empresas",
       subPestania: [
-        "Agrícola",
-        "Comercios",
-        "Trasportistas",
-        "Electrodoméstricos",
+        "Embarcaciones",
+        "Protección Agrícola",
+        "Seguro Técnico",
+        "Trasporte",
       ],
       redirect: [
+        "/servicios/embarcaciones",
         "/servicios/agricola",
-        "/servicios/comercio",
-        "/servicios/transporte",
         "/servicios/tecnico",
+        "/servicios/transporte",     
       ],
     },
     {
@@ -64,7 +64,7 @@ export default function NavPersonalizado({ tipoOscuro, cambiar }) {
     },
     {
       title: "Contacto",
-      redirect: "/",
+      redirect: "/contacto",
     },
   ];
 
@@ -83,7 +83,7 @@ export default function NavPersonalizado({ tipoOscuro, cambiar }) {
         />
       </Link>
       <nav
-        className={`hidden flex-col gap-1 px-4 pb-4 absolute right-0 text-${darkTheme ? "black bg-none" : "white bg-[#4F4F4F]"} md:p-0 md:!flex md:static md:flex-row md:justify-center md:align-middle md:gap-7 xl:gap-9 `}
+        className={`hidden flex-col w-[auto] gap-1 pl-5 pr-9  pb-5 absolute right-0 text-${darkTheme ? "black bg-none" : "white bg-[#4F4F4F]"} md:p-0 md:!flex md:static md:flex-row md:justify-center md:align-middle md:gap-7 xl:gap-9 `}
         ref={refNav}
       >
         {pestanias.map((pestania, index) => (
