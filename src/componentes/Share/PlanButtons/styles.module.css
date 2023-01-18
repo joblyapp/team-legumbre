@@ -22,19 +22,20 @@
   border-bottom-right-radius: 8px;
 }
 
-.active,
-.inactive {
+span.active,
+span.inactive {
   border: 1px solid var(--color-green-dark);
   font-weight: 600;
   font-size: 16px;
+  cursor: pointer;
 }
 
-.active {
+span.active {
   background-color: var(--color-green-dark);
   color: var(--color-white);
 }
 
-.inactive {
+span.inactive {
   background-color: var(--color-green-lemon);
   color: var(--color-green-dark);
 }
