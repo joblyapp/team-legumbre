@@ -4,7 +4,7 @@ import NavPersonalizado from "./componentes/puro/NavPersonalizado";
 
 import Landing from "./componentes/Landing";
 import SignUp from "./componentes/SignUp";
-import { Seguros } from "./componentes/Share";
+import { Seguros, QuoteCarForm } from "./componentes/Share";
 import { servicios } from "./Helpers/Servicios";
 
 function App() {
@@ -31,6 +31,7 @@ function App() {
                 />
               );
             })}
+            <Route path="/servicios/auto/cotizar" element={<QuoteCarForm />} />
           </Route>
         </Routes>
       </div>

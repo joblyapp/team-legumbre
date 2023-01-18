@@ -1,10 +1,12 @@
 import styles from "./service.module.css";
 import { useState } from "react";
-import { Table } from "../index";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
+import { HeroImage, Table } from '../index';
 
 const Seguros = ({ source, title, description }) => {
   const [plan, setPlan] = useState("basic");
+  const location = useLocation();
+  const { pathname } = location;
 
   return (
     <div className={`relative z-10 ${styles.fullContainer}`}>
@@ -13,27 +15,7 @@ const Seguros = ({ source, title, description }) => {
         alt="decorative wave"
         className="w-full h-auto absolute top-0 left-0 z-0"
       />
-      <section className={styles.heroImage}>
-        <picture className="w-full h-full">
-          <source
-            srcSet={`/imagenes/servicios/${source}-mobile.png`}
-            media="(max-width: 1023px)"
-          />
-          <img
-            src={`/imagenes/servicios/${source}-desktop.png`}
-            alt={`Portada de ${source || "servicio"}`}
-            className="w-full"
-          />
-        </picture>
-        <div className={styles.heroInfo}>
-          <h2 className={styles.heroTitle}>{title || "Título del Servicio"}</h2>
-          {description && (
-            <p className={styles.heroDescription}>
-              {description || "Descripción del servicio a prestar"}
-            </p>
-          )}
-        </div>
-      </section>
+      <HeroImage source={source} title={title} description={description} />
       <section className={styles.middleTitle}>
         <h3>Paquetes y coberturas</h3>
       </section>
@@ -67,7 +49,7 @@ const Seguros = ({ source, title, description }) => {
         <Table plan={plan} />
       </section>
       <Link
-        to="/"
+        to={`${pathname.includes('auto') ? "/servicios/auto/cotizar" : "/"}`}
         className={`sm:flex hidden w-full py-4 rounded-[20px] justify-center bg-[var(--color-blue-light)] text-[var(--color-blue-marine)] text-4xl font-[Roboto]`}
       >
         ¡Cotizá ahora!
