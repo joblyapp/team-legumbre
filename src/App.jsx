@@ -5,8 +5,8 @@ import Footer from "./componentes/Footer";
 
 import Landing from "./componentes/Landing";
 import SignUp from "./componentes/SignUp";
+import { Seguros, QuoteCarForm } from "./componentes/Share";
 import Contact from './componentes/contact/Contact'
-import { Seguros } from "./componentes/Share";
 import { servicios } from "./Helpers/Servicios";
 
 
@@ -35,6 +35,7 @@ function App() {
                 />
               );
             })}
+            <Route path="/servicios/auto/cotizar" element={<QuoteCarForm />} />
           </Route>
         </Routes>
         <Footer/>
