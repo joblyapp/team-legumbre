@@ -120,14 +120,14 @@ export const quoteCarInputsStep1 = [{
     basis: "basis-[100%] "
   },
   {
-    name: "text",
-    type: "dni",
+    name: "dni",
+    type: "text",
     label: "DNI (Documento de Identificación)",
     placeholder: "Ej: 11.123.123",
     basis: "basis-[75%] "
   },
   {
-    name: "telefono",
+    name: "tel",
     type: "text",
     label: "Teléfono",
     placeholder: "Ej: 2494225566",
@@ -145,7 +145,8 @@ export const quoteCarInputsStep2 = [{
   {
     name: "carModel",
     type: "select",
-    label: "Ej: Fiesta 1.6 5 p. se (kd)",
+    label: "Modelo del vehículo",
+    placeholder: "Ej: Fiesta 1.6 5 p. se (kd)",
     basis: "basis-[100%]"
   },
   {
