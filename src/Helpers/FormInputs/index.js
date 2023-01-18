@@ -73,3 +73,31 @@ export const loginInputs = [
   }
 ];
 
+export const contactInputs = [
+  {
+    name: "fullname",
+    type: "text",
+    placeholder: "Ej: Tomas Hernandez",
+    label: "Nombre Completo",
+  },
+  {
+    name: "email",
+    type: "email",
+    placeholder: "Ej: example@gmail.com",
+    label: "Email",
+  },
+  {
+    name: "subject",
+    type: "text",
+    placeholder: "Ej: Coberturas",
+    label: "Motivo",
+  },
+  {
+    name: "message",
+    type: "textarea",
+    placeholder: "",
+    rows: 5,
+    label: "Mensaje",
+  },
+]
+
