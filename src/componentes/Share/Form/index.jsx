@@ -3,7 +3,7 @@ import { useForm } from "react-hook-form";
 import { joiResolver } from "@hookform/resolvers/joi";
 import { Button, InputForm, SocialIcon } from "../index";
 
-const Form = ({ schema, fields, buttonText }) => {
+const Form = ({ schema, fields, buttonText, showWithRS = true }) => {
   const {
     handleSubmit,
     register,
@@ -26,14 +26,20 @@ const Form = ({ schema, fields, buttonText }) => {
             label={field?.label || null}
             register={register}
             error={errors[field?.name]}
+            cols={field?.cols || 1}
+            rows={field?.rows || 1}
           />
         )
       })}
       <div className={styles.buttonContainer}>
         <Button type={"submit"}>{buttonText || "Enviar"}</Button>
       </div>
-      <p>O accede mediante</p>
-      <div className={styles.socialContainer}>
+      {
+        showWithRS && (<p>O accede mediante</p>)
+      }
+      {
+        showWithRS && (
+          <div className={styles.socialContainer}>
         <SocialIcon src={"/icons-svg/GoogleOriginal.svg"} alt={"Google icon"} />
         <SocialIcon
           src={"/icons-svg/FacebookOriginal.svg"}
@@ -41,6 +47,7 @@ const Form = ({ schema, fields, buttonText }) => {
         />
         <SocialIcon src={"/icons-svg/AppleOriginal.svg"} alt={"Apple icon"} />
       </div>
+      )}
     </form>
   );
 };
