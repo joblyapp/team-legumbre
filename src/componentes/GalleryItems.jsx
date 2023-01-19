@@ -10,7 +10,7 @@ export default function GalleryItems({ title, icon, bgImg, source }) {
       style={{
         backgroundImage: `url(${bgImg})`,
       }}
-      className="items-1"
+      className="items-1 cursor-pointer"
       onClick={() => navigate(source)}
     >
       <div className="icon-seguro">
