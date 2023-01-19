@@ -9,6 +9,11 @@
   z-index: 15;
 }
 
+.form input[name="zip"],
+.form input[name="dob"] {
+  max-width: 10.5rem;
+}
+
 .policity {
   flex: 1 1 100%;
   display: flex;

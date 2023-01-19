@@ -24,7 +24,7 @@ export default function Footer () {
                     <p className="break-all">www.argentina.gob.ar/ssn</p>
                 </div>
                 <div className="w-1/2 p-4 md:w-1/4">
-                    <a href="#">
+                    <a href="https://www.argentina.gob.ar/superintendencia-de-seguros">
                         <img className="w-64 mx-auto" src="../public/imagenes/LogoSSN.png" alt="SSN" />
                     </a>
                 </div>
