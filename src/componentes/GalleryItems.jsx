@@ -1,8 +1,9 @@
 import "../App.css";
 import styles from "../modul-css/GalleryItems.css";
+import { useNavigate } from "react-router-dom";
 
-export default function GalleryItems(props = { title, icon, bgImg }) {
-  const { title, icon, bgImg } = props;
+export default function GalleryItems({ title, icon, bgImg, source }) {
+  const navigate = useNavigate();
 
   return (
     <div
@@ -10,6 +11,7 @@ export default function GalleryItems(props = { title, icon, bgImg }) {
         backgroundImage: `url(${bgImg})`,
       }}
       className="items-1"
+      onClick={() => navigate(source)}
     >
       <div className="icon-seguro">
         <img src={icon} />
