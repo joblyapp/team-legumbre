@@ -21,7 +21,7 @@ const Contact = () => {
           </p>
         </div>
       </picture>
-      <div className="bg-white flex flex-col desk:w-1/2 w-4/5 lg:h-full rounded-l-xl lg:p-24">
+      <div className="bg-white flex flex-col lg:w-1/2 w-4/5 lg:h-full rounded-l-xl lg:p-24">
         <div className="pb-12 hidden lg:flex lg:flex-col">
             <h1 className="text-6xl">Contacto</h1>
             <p className="text text-2xl text-[#575757]">Estamos para ayudarte, déjanos tu duda</p>
