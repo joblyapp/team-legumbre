@@ -17,4 +17,6 @@
   --color-green-dark: #286068;
 
   --color-red-error: rgb(230, 93, 93);
+
+  --tw-animate-speed: 1.2s;
 }
