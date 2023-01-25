@@ -24,7 +24,7 @@ const Seguros = ({ source, title, description }) => {
         <Table plan={plan} />
       </section>
       <Link
-        to={`${pathname.includes('auto') ? "/servicios/auto/cotizar" : "/"}`}
+        to={`${pathname.includes('auto') ? "/servicios/auto/cotizar" : "/contacto"}`}
         className={`flex w-full sm:py-4 py-3 rounded-[20px] justify-center bg-[var(--color-blue-light)] text-[var(--color-blue-marine)] text-2xl sm:text-4xl font-[Roboto]`}
       >
         ¡Cotizá ahora!
