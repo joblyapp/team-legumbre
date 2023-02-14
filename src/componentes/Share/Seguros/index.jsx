@@ -1,5 +1,5 @@
 import styles from './service.module.css';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { HeroImage, PlanButtons, Table, Loader } from '../index';
 
@@ -8,6 +8,10 @@ const Seguros = ({ source, title, description }) => {
   const [isFetching, setFetching] = useState(true);
   const location = useLocation();
   const { pathname } = location;
+
+  useEffect(() => {
+    setFetching(true);
+  }, [source]);
 
   setTimeout(() => setFetching(false), 1500);
 
