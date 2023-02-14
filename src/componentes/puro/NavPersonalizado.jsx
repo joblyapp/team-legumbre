@@ -1,13 +1,17 @@
-import { useRef, useState } from "react";
-import { Link } from "react-router-dom";
-import Pestania from "./Pestania";
+import { useRef, useState } from 'react';
+import { Link, useLocation } from 'react-router-dom';
+import { Link as NavigateTo } from 'react-scroll';
+import Pestania from './Pestania';
+
 export default function NavPersonalizado({ tipoOscuro, cambiar }) {
   const [darkTheme, setDarkTheme] = useState(tipoOscuro);
   const refNav = useRef();
   const refHeader = useRef();
   const [isOpen, setIsOpen] = useState(false);
+  const location = useLocation();
+  const path = location.pathname;
 
-  addEventListener("scroll", () => {
+  addEventListener('scroll', () => {
     if (cambiar) {
       window.innerHeight > window.scrollY
         ? setDarkTheme(false)
@@ -16,14 +20,15 @@ export default function NavPersonalizado({ tipoOscuro, cambiar }) {
   });
 
   function manejadorNav() {
-    refNav.current.style.display = `${isOpen ? "none" : "flex"}`;
+    refNav.current.style.display = `${isOpen ? 'none' : 'flex'}`;
     refNav.current.style.top = `${refHeader.current.clientHeight}px`;
     setIsOpen(!isOpen);
   }
 
   const pestanias = [
     {
-      title: "Seguros Personales",
+      title: 'Seguros Personales',
+      scrollTo: 'gallery-items',
       subPestania: [
         "Automotores",
         "Motovehículos",
@@ -40,7 +45,8 @@ export default function NavPersonalizado({ tipoOscuro, cambiar }) {
       ],
     },
     {
-      title: "Seguros Empresas",
+      title: 'Seguros Empresas',
+      scrollTo: 'gallery-items',
       subPestania: [
         "Embarcaciones",
         "Protección Agrícola",
@@ -51,39 +57,51 @@ export default function NavPersonalizado({ tipoOscuro, cambiar }) {
         "/servicios/embarcaciones",
         "/servicios/agricola",
         "/servicios/tecnico",
-        "/servicios/transporte",     
+        "/servicios/transporte",
       ],
     },
     {
-      title: "Siniestros",
-      redirect: "/",
+      title: 'Siniestros',
+      redirect: '/',
     },
     {
-      title: "Quienes Somos",
-      redirect: "/",
+      title: 'Quienes Somos',
+      redirect: '/',
     },
     {
-      title: "Contacto",
-      redirect: "/contacto",
+      title: 'Contacto',
+      redirect: '/contacto',
     },
   ];
 
   return (
     <header
       className={`sticky top-0 left-0 w-full flex flex-row  font-jost text-[20px] justify-between px-[5%] pt-1 lg:text-[17px] xl:text-[22px]  desk:text-[24px] z-50 ${
-        darkTheme ? "bg-[var(--color-green-base)]" : "bg-[#4F4F4F]"
+        darkTheme ? 'bg-[var(--color-green-base)]' : 'bg-[#4F4F4F]'
       }`}
       ref={refHeader}
     >
-      <Link to="/">
-        <img
-          className="h-[80px] lg:h-[85px] xl:h-[105px] desk:h-full"
-          src={`/imagenes/logo-nav-${darkTheme ? "negro" : "blanco"}.png`}
-          alt="logo-nav"
-        />
-      </Link>
+      {path === '/' ? (
+        <NavigateTo to="hero-section" spy={true} smooth={true} duration={500}>
+          <img
+            className="h-[80px] lg:h-[85px] xl:h-[105px] desk:h-full cursor-pointer"
+            src={`/imagenes/logo-nav-${darkTheme ? 'negro' : 'blanco'}.png`}
+            alt="logo-nav"
+          />
+        </NavigateTo>
+      ) : (
+        <Link to="/">
+          <img
+            className="h-[80px] lg:h-[85px] xl:h-[105px] desk:h-full"
+            src={`/imagenes/logo-nav-${darkTheme ? 'negro' : 'blanco'}.png`}
+            alt="logo-nav"
+          />
+        </Link>
+      )}
       <nav
-        className={`hidden flex-col w-[auto] gap-1 pl-5 pr-9  pb-5 absolute right-0 text-${darkTheme ? "black bg-none" : "white bg-[#4F4F4F]"} md:p-0 md:!flex md:static md:flex-row md:justify-center md:align-middle md:gap-7 xl:gap-9 `}
+        className={`hidden flex-col w-[auto] gap-1 pl-5 pr-9  pb-5 absolute right-0 text-${
+          darkTheme ? 'black bg-none' : 'white bg-[#4F4F4F]'
+        } md:p-0 md:!flex md:static md:flex-row md:justify-center md:align-middle md:gap-7 xl:gap-9 `}
         ref={refNav}
       >
         {pestanias.map((pestania, index) => (
@@ -97,9 +115,9 @@ export default function NavPersonalizado({ tipoOscuro, cambiar }) {
         </Link>
       </nav>
       <img
-        src={`/imagenes/menu-${darkTheme ? "negro" : "blanco"}.png`}
+        src={`/imagenes/menu-${darkTheme ? 'negro' : 'blanco'}.png`}
         className={`fill-${
-          darkTheme ? "black" : "white"
+          darkTheme ? 'black' : 'white'
         } self-center w-[30px] h-[20px] block md:hidden`}
         alt="menu"
         onClick={manejadorNav}
