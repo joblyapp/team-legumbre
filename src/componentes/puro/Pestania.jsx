@@ -31,6 +31,7 @@ export default function Pestania({ pestania, darkTheme }) {
   function manejadorSubPestania() {
     refSubPestania.current.style.display = `${isOpen ? 'none' : 'flex'}`;
     setIsOpen(false);
+    manejadorPestania();
   }
 
   if (pestania.subPestania && path !== '/') {
@@ -50,9 +51,9 @@ export default function Pestania({ pestania, darkTheme }) {
         </div>
 
         <div
-          className={`hidden flex-col rounded-lg relative md:absolute ${
-            dark ? 'md:bg-none' : 'md: bg-[#4F4F4F]'
-          } md:pb-2 md:h-auto md`}
+          className={`hidden flex-col relative rounded-lg md:absolute
+           bg-[#4F4F4F]
+          max-w-fit md:h-auto md`}
           ref={refSubPestania}
           onMouseLeave={manejadorSubPestania}
         >

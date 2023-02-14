@@ -16,7 +16,7 @@ function HomeSectionContent() {
           </p>
           <div className="mt-20 text-center md:text-left">
             <a
-              href="#"
+              href="/registro"
               className="py-3 px-12 bg-[#AAA4F2] rounded-xl text-black text-2xl"
             >
               ¡Cotiza ahora!

@@ -1,3 +1,4 @@
+import Loader from "./Loading";
 import Button from "./Button";
 import InputForm from "./InputForm";
 import SocialIcon from "./SocialIcon";
@@ -9,6 +10,7 @@ import HeroImage from "./HeroImage";
 import QuoteCarForm from "./QuoteCarForm";
 
 export {
+  Loader,
   Button,
   InputForm,
   SocialIcon,
