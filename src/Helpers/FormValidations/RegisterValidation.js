@@ -16,16 +16,13 @@ const RegisterValidation = Joi.object({
       'string.empty': 'Campo obligatorio.',
       'string.pattern.base': 'Ingrese un nombre válido.',
       'string.min': 'Mínimo 7 caracteres.',
-      'string.max': 'Máximo 30 caracteres.'
+      'string.max': 'Máximo 30 caracteres.',
     }),
-  dob: Joi.date()
-    .less(`${mayority}`)
-    .required()
-    .messages({
-      'any.required': 'Campo obligatorio.',
-      'date.base': 'Ingrese una fecha de nacimiento válida.',
-      'date.less': 'Debe ser mayor de 18 años.',
-    }),
+  dob: Joi.date().less(`${mayority}`).required().messages({
+    'any.required': 'Campo obligatorio.',
+    'date.base': 'Ingrese una fecha de nacimiento válida.',
+    'date.less': 'Debe ser mayor de 18 años.',
+  }),
   email: Joi.string()
     .email({ tlds: { allow: false } })
     .required()
@@ -35,40 +32,29 @@ const RegisterValidation = Joi.object({
       'string.email': 'Ingrese un email válido.',
       'string.base': 'Ingrese un email válido.',
     }),
-  password: Joi.string()
-    .alphanum()
-    .required()
-    .min(8)
-    .max(30)
-    .messages({
-      'string.empty': 'Campo obligatorio.',
-      'any.required': 'Campo obligatorio.',
-      'string.min': 'Mínimo 7 caracteres.',
-      'string.max': 'Máximo 30 caracteres.',
-      'any.only': 'Las contraseñas deben coincidir.'
-    }),
+  password: Joi.string().alphanum().required().min(8).max(30).messages({
+    'string.empty': 'Campo obligatorio.',
+    'any.required': 'Campo obligatorio.',
+    'string.min': 'Mínimo 7 caracteres.',
+    'string.max': 'Máximo 30 caracteres.',
+    'any.only': 'Las contraseñas deben coincidir.',
+  }),
   confirmPassword: Joi.ref('password'),
-  location: Joi.string()
-    .required()
-    .messages({
-      'string.empty': 'Campo obligatorio.',
-      'any.required': 'Campo obligatorio.',
-    }),
-  zip: Joi.number()
-    .required()
-    .min(9999)
-    .messages({
-      'number.base': 'Campo obligatorio.',
-      'any.required': 'Campo obligatorio.',
-      'number.min': 'Ingrese un código postal válido.',
-    }),
-  policity: Joi.boolean()
-    .required()
-    .valid(true)
-    .messages({
-      'boolean.empty': 'Debes aceptar nuestros terminos y politicas para poder registrarte.',
-      'any.only': 'Debes aceptar nuestros terminos y politicas para poder registrarte.',
-    }),
+  location: Joi.string().required().messages({
+    'string.empty': 'Campo obligatorio.',
+    'any.required': 'Campo obligatorio.',
+  }),
+  zip: Joi.number().required().min(9999).messages({
+    'number.base': 'Campo obligatorio.',
+    'any.required': 'Campo obligatorio.',
+    'number.min': 'Ingrese un código postal válido.',
+  }),
+  policity: Joi.boolean().required().valid(true).messages({
+    'boolean.empty':
+      'Debes aceptar nuestros terminos y politicas para poder registrarte.',
+    'any.only':
+      'Debes aceptar nuestros terminos y politicas para poder registrarte.',
+  }),
 });
 
 export default RegisterValidation;

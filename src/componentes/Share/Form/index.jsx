@@ -1,19 +1,29 @@
-import styles from "./form.module.css";
-import { useForm } from "react-hook-form";
-import { joiResolver } from "@hookform/resolvers/joi";
-import { Button, InputForm, SocialIcon } from "../index";
+import styles from './form.module.css';
+import { useForm } from 'react-hook-form';
+import { joiResolver } from '@hookform/resolvers/joi';
+import { Button, InputForm, SocialIcon } from '../index';
 
-const Form = ({ schema, fields, buttonText, showWithRS = true }) => {
+const Form = ({
+  schema,
+  fields,
+  buttonText,
+  showWithRS = true,
+  onSubmitAction = (data) => console.log(data),
+}) => {
   const {
     handleSubmit,
     register,
+    reset,
     formState: { errors },
   } = useForm({
-    node: "onBlur",
+    node: 'onBlur',
     resolver: schema ? joiResolver(schema) : null,
   });
 
-  const registerData = (data) => console.log(data);
+  const registerData = (data) => {
+    onSubmitAction(data);
+    reset();
+  };
 
   return (
     <form onSubmit={handleSubmit(registerData)} className={styles.form}>
@@ -29,24 +39,24 @@ const Form = ({ schema, fields, buttonText, showWithRS = true }) => {
             cols={field?.cols || 1}
             rows={field?.rows || 1}
           />
-        )
+        );
       })}
       <div className={styles.buttonContainer}>
-        <Button type={"submit"}>{buttonText || "Enviar"}</Button>
+        <Button type={'submit'}>{buttonText || 'Enviar'}</Button>
       </div>
-      {
-        showWithRS && (<p>O accede mediante</p>)
-      }
-      {
-        showWithRS && (
-          <div className={styles.socialContainer}>
-        <SocialIcon src={"/icons-svg/GoogleOriginal.svg"} alt={"Google icon"} />
-        <SocialIcon
-          src={"/icons-svg/FacebookOriginal.svg"}
-          alt={"Facebook icon"}
-        />
-        <SocialIcon src={"/icons-svg/AppleOriginal.svg"} alt={"Apple icon"} />
-      </div>
+      {showWithRS && <p>O accede mediante</p>}
+      {showWithRS && (
+        <div className={styles.socialContainer}>
+          <SocialIcon
+            src={'/icons-svg/GoogleOriginal.svg'}
+            alt={'Google icon'}
+          />
+          <SocialIcon
+            src={'/icons-svg/FacebookOriginal.svg'}
+            alt={'Facebook icon'}
+          />
+          <SocialIcon src={'/icons-svg/AppleOriginal.svg'} alt={'Apple icon'} />
+        </div>
       )}
     </form>
   );

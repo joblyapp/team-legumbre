@@ -24,7 +24,7 @@ const InputForm = ({
           rows={rows}
           className={`${styles.child} ${
             error ? styles.withError : null
-          } border border-gray-400 rounded-lg`}
+          } border border-gray-400 rounded-lg p-3`}
           placeholder={placeholder}
           {...register(name)}
         ></textarea>

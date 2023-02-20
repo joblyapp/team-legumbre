@@ -73,7 +73,7 @@ export const loginInputs = [{
 
 export const contactInputs = [
   {
-    name: "fullname",
+    name: "fullName",
     type: "text",
     placeholder: "Ej: Tomas Hernandez",
     label: "Nombre Completo",
@@ -93,7 +93,7 @@ export const contactInputs = [
   {
     name: "message",
     type: "textarea",
-    placeholder: "",
+    placeholder: "¡Hola me gustaría consultar sobre . . .!",
     rows: 5,
     label: "Mensaje",
   },
